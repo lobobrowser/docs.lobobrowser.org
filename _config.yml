@@ -1,0 +1,10 @@
+name:      Lobo Browser Docs
+markdown:  redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "tables", "with_toc_data", "autolink"]
+pygments:  true
+highlighter: pygments
+permalink: pretty
+baseurl:   //docs.lobobrowser.com
+mainsiteurl: //lobobrowser.com
+
