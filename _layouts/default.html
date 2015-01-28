@@ -4,13 +4,13 @@
 
 <head>
 
-  <title>
+   <title>
   	{% if page.url == "/" %}
 		{{ page.title }}
 	{% else %}
 		{{ page.title }} - {{ site.name }}
 	{% endif %}
-	</title>
+  </title>
 
   <!-- begin meta tags -->
   <meta charset="utf-8">
@@ -58,7 +58,7 @@
             <li><a href="{{ site.communitysite }}">Community</a></li>
             <li><a href="{{ site.mainsiteurl }}/get-involved">Get Involved</a></li>
             <li><a href="{{ site.extendsite }}">Extend</a></li>
-            <li><a href="{{ site.baseurl }}">Docs</a></li>
+            <li class="active"><a href="{{ site.baseurl }}">Docs</a></li>
             <li><a href="{{ site.blogsite }}">Blog</a></li>
           </ul>
         </div>
