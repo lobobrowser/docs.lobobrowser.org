@@ -1,14 +1,11 @@
+<div class="list-group">
 	{% assign i = 0 %}
 	{% assign sorted_pages = site.pages | sort:"name" %}
 	{% for catpage in sorted_pages %}
 		{% for pc in catpage.basepackages %}
 		{% if pc == include.package %}
-		<tr>
-			<td>Package: catpage</td>
-		</tr>
-		<tr>
-			<td><a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.package }}</a></td>
-		</tr>
+			<a class="lisg-group-item" href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.package }}</a>
 		{% endif %}
 		{% endfor %}
 	{% endfor %}
+</div>
