@@ -8,9 +8,9 @@ packages: []
 ##Cobra API Docs
 
 {:.table}
-|com.lobobrowser.cobra.engine|
-
-| {% include package.html package="com.lobobrowser.cobra.engine" %} |
+| com.lobobrowser.cobra.engine |
+| ---------------------------- |
+{% include package.html package="com.lobobrowser.cobra.engine" %} 
 
 {:.table}
 
