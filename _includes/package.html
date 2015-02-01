@@ -1,11 +1,16 @@
-<ul class="pages">
+<table class="table">
+	<tr>
+		<td>Package: catpage.basepackages</td>
+	</tr>
 	{% assign i = 0 %}
 	{% assign sorted_pages = site.pages | sort:"name" %}
 	{% for catpage in sorted_pages %}
 		{% for pc in catpage.basepackages %}
 		{% if pc == include.package %}
-			<li><a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.package }}</a></li>
+		<tr>
+			<td><a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.package }}</a></td>
+		</tr>
 		{% endif %}
 		{% endfor %}
 	{% endfor %}
-</ul>
+</table>
