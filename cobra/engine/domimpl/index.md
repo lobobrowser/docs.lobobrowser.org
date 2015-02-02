@@ -5,3 +5,5 @@ package: "com.lobobrowser.cobra.engine.domimpl"
 ---
 
 {% include interface.html package="com.lobobrowser.cobra.engine.domimpl" %} 
+
+{% include class.html package="com.lobobrowser.cobra.engine.domimpl" %} 
