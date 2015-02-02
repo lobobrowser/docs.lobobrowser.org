@@ -1,11 +1,18 @@
-<ul class="list-group">
+<table class="table">
+	<tr>
+		<td>Class Summary</td>
+		<td></td>
+	</tr>
 	{% assign i = 0 %}
 	{% assign sorted_pages = site.pages | sort:"name" %}
 	{% for catpage in sorted_pages %}
-		{% for pc in catpage.classes %}
-		{% if pc == include.class %}
-			<li class="list-group-item"><a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.class }}</a></li>
+		{% for pc in catpage.basepackages  %}
+		{% if pc == include.package  %}
+		<tr>
+			<td><a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.class }}</a></td>
+			<td>{{ catpage.summary }}</td>
+		</tr>
 		{% endif %}
 		{% endfor %}
 	{% endfor %}
-</ul>
+</table>
