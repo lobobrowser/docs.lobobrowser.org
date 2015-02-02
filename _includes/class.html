@@ -8,10 +8,12 @@
 	{% for catpage in sorted_pages %}
 		{% for pc in catpage.basepackages  %}
 		{% if pc == include.package  %}
+		{% if catpage.type == "class" %}
 		<tr>
 			<td><a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.class }}</a></td>
 			<td>{{ catpage.class_summary }}</td>
 		</tr>
+		{% endif %}
 		{% endif %}
 		{% endfor %}
 	{% endfor %}
