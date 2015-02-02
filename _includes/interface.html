@@ -1,11 +1,18 @@
-<ul class="list-group">
+<table class="table">
+	<tr>
+		<td>Interface Summary</td>
+		<td></td>
+	</tr>
 	{% assign i = 0 %}
 	{% assign sorted_pages = site.pages | sort:"name" %}
 	{% for catpage in sorted_pages %}
 		{% for pc in catpage.interfaces %}
 		{% if pc == include.interface %}
-			<li class="list-group-item"><a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.interface }}</a></li>
+		<tr>
+			<td><a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.interface }}</a></td>
+			<td>{{ catpage.summary }}</td>
+		</tr>
 		{% endif %}
 		{% endfor %}
 	{% endfor %}
-</ul>
+</table>
