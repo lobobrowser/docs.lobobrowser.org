@@ -1,0 +1,11 @@
+<ul class="list-group">
+	{% assign i = 0 %}
+	{% assign sorted_pages = site.pages | sort:"name" %}
+	{% for catpage in sorted_pages %}
+		{% for pc in catpage.interfaces %}
+		{% if pc == include.interface %}
+			<li class="list-group-item"><a href="{{ site.baseurl }}{{ catpage.url }}">{{ catpage.interface }}</a></li>
+		{% endif %}
+		{% endfor %}
+	{% endfor %}
+</ul>
